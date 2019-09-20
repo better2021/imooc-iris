@@ -9,7 +9,7 @@ import (
 )
 
 type ProductController struct {
-	Ctx iris.Context
+	Ctx iris.Context // 上下文
 	ProductService services.IProductService
 }
 

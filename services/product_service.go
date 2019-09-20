@@ -34,11 +34,12 @@ func (p *ProductService) DeleteProductByID(productID int64) bool{
 	return p.productRepository.Delete(productID)
 }
 
-func (p*ProductService) InsertProduct(product *datamodels.Product)(int64,error){
+func (p *ProductService) InsertProduct(product *datamodels.Product)(int64,error){
 	return p.productRepository.Insert(product)
 }
 
 func (p *ProductService) UpdateProduct(product *datamodels.Product) error{
 	return p.productRepository.Update(product)
 }
+
 

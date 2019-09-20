@@ -1,7 +1,6 @@
 package common
 
 import (
-	"fmt"
 	"reflect"
 	"time"
 	"strconv"
@@ -14,7 +13,6 @@ func DataToStructByTagSql(data map[string]string, obj interface{}) {
 	for i := 0; i < objValue.NumField(); i++ {
 		//获取sql对应的值
 		value := data[objValue.Type().Field(i).Tag.Get("sql")]
-		fmt.Println("当前下获取的Map对应的小标为：" + value)
 		//获取对应字段的名称
 		name := objValue.Type().Field(i).Name
 		//获取对应字段类型
